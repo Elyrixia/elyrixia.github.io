@@ -1,2 +1,2 @@
-import './style.css'
+import './scss/styles.scss'
 import 'scalajs:main.js'

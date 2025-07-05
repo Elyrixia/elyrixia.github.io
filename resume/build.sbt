@@ -4,7 +4,7 @@ lazy val resume = project
   .in(file("."))
   .enablePlugins(ScalaJSPlugin) // Enable the Scala.js plugin in this project
   .settings(
-    scalaVersion := "3.7.0",
+    scalaVersion := "3.7.1",
 
     // Tell Scala.js that this is an application with a main method
     scalaJSUseMainModuleInitializer := true,
@@ -22,8 +22,6 @@ lazy val resume = project
     },
     libraryDependencies ++= List(
       "org.scala-js" %%% "scalajs-dom" % "2.8.0",
-      "com.raquo"    %%% "laminar"     % "17.2.1",
-      "com.raquo"    %%% "waypoint"    % "10.0.0-M1",
-      "com.lihaoyi"  %%% "upickle"     % "4.2.1"
+      "com.raquo"    %%% "laminar"     % "17.2.1"
     )
   )

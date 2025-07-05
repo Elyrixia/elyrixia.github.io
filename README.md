@@ -32,3 +32,4 @@ npm run build
 # References
 
 - [Laminar doc](https://laminar.dev/documentation)
+- [The awesome bootstrap resume template](https://github.com/StartBootstrap/startbootstrap-resume)
