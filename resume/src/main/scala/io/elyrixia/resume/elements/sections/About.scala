@@ -6,13 +6,22 @@ import org.scalajs.dom.HTMLElement
 
 private[sections] object About {
 
-  private val description: String =
-    "I am an experienced backend engineer " +
-      " with a strong background in site reliability engineering, devOps and infrastructure related topics." +
+  private val description = div(
+    className := "lead mb-5",
+    p(
+      "I am an experienced backend engineer with a strong background in site reliability engineering," +
+        " devOps and infrastructure related topics."
+    ),
+    p(
       " I am passionate about building robust, scalable systems, from implementing complex business features" +
-      " to putting in place the right matching infrastructure." +
-      " I'm currently best familiar with the JVM ecosystem and especially the Scala language but I am used " +
-      " to working with a wide range of technologies and languages to fill the needs of each project."
+        " to putting in place the right matching infrastructure."
+    ),
+    p(
+      " I'm currently best familiar with the JVM ecosystem and especially the Scala language but I am used to" +
+        " working with a wide range of technologies and programming languages to fill the needs of each project" +
+        " I lead or contribute to."
+    )
+  )
 
   private def icon(name: String, link: String): ReactiveHtmlElement[HTMLElement] = {
     a(
@@ -24,17 +33,34 @@ private[sections] object About {
     )
   }
 
+  private val profilePic = div(
+    className := "col-auto",
+    img(
+      className := "img-fluid img-profile rounded-circle mx-auto mb-2",
+      className := "logo",
+      alt       := "my profile pic",
+      src       := "/logo-color.webp"
+    )
+  )
+
   val htmlElement: ReactiveHtmlElement[HTMLElement] = sectionTag(
     className := "resume-section",
     idAttr    := "about",
     div(
       className := "resume-section-content",
-      h1(
-        className := "mb-0",
-        "Tristan ",
-        span(
-          className := "text-primary",
-          "Sallé"
+      div(
+        className := "row align-items-center mb-4",
+        profilePic,
+        div(
+          className := "col",
+          h1(
+            className := "mb-0",
+            "Tristan ",
+            span(
+              className := "text-primary",
+              "Sallé"
+            )
+          )
         )
       ),
       div(
@@ -45,7 +71,7 @@ private[sections] object About {
           "salle.trist@gmail.com"
         )
       ),
-      p(className := "lead mb-5", description),
+      description,
       div(
         className := "social-icons",
         List(

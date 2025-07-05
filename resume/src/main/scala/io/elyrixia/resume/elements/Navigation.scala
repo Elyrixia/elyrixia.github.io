@@ -7,6 +7,22 @@ import org.scalajs.dom.HTMLElement
 
 object Navigation {
 
+  private def section(name: String) = li(
+    className := "nav-item",
+    a(
+      className := "nav-link js-scroll-trigger active",
+      href      := s"#${name.toLowerCase}",
+      name
+    )
+  )
+
+  private val sections = List(
+    section("About"),
+    section("Experience"),
+    section("Skills"),
+    section("Education")
+  )
+
   val htmlElement: ReactiveHtmlElement[HTMLElement] = navTag(
     className := "navbar navbar-expand-lg navbar-dark bg-primary fixed-top",
     idAttr    := "sideNav",
@@ -42,22 +58,7 @@ object Navigation {
       idAttr    := "navbarResponsive",
       ul(
         className := "navbar-nav",
-        li(
-          className := "nav-item",
-          a(
-            className := "nav-link js-scroll-trigger active",
-            href      := "#about",
-            "About"
-          )
-        ),
-        li(
-          className := "nav-item",
-          a(
-            className := "nav-link js-scroll-trigger",
-            href      := "#experience",
-            "Experience"
-          )
-        )
+        sections
       )
     )
   )

@@ -1,15 +1,17 @@
-package io.elyrixia.resume.elements.sections
+package io.elyrixia.resume.elements
 
 import com.raquo.laminar.api.L.{*, given}
 import com.raquo.laminar.nodes.ReactiveHtmlElement
 import org.scalajs.dom.HTMLDivElement
 
-object Sections {
+package object sections {
 
   private val separator = hr(className := "m-0")
   private val sections = List(
     About.htmlElement,
-    Experience.htmlElement
+    Experience.htmlElement,
+    Skills.htmlElement,
+    Education.htmlElement
   )
 
   val htmlElement: ReactiveHtmlElement[HTMLDivElement] = div(
