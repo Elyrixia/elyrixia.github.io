@@ -28,20 +28,38 @@ private[sections] object Experience {
   private val experiences = List(
     experience(
       "Staff Engineer",
-      "Teads",
+      "Teads - SSP Video Team",
       "desc1",
       "January 2025 - Present"
     ),
     experience(
       "Senior Software Engineer",
-      "Teads",
+      "Teads - SSP Scaling Team",
       "desc2",
-      "January 2019 - January 2025"
+      "April 2023 - January 2025"
+    ),
+    experience(
+      "Senior Software Engineer",
+      "Teads - Infrastructure Reliability Team",
+      "desc3",
+      "January 2023 - April 2023"
+    ),
+    experience(
+      "Senior Software Engineer",
+      "Teads - SSP Scaling Team",
+      "desc4",
+      "January 2021 - January 2023"
+    ),
+    experience(
+      "Senior Software Engineer",
+      "Teads - SSP Team",
+      "desc5",
+      "January 2019 - January 2021"
     ),
     experience(
       "Software Engineer",
-      "Teads",
-      "desc3",
+      "Teads - SSP Team",
+      "desc6",
       "September 2015 - January 2019"
     )
   )

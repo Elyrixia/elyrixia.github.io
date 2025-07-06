@@ -37,7 +37,7 @@ private[sections] object Education {
     education(
       "Bachelor's degree - Science specializing in Mathematics",
       "Lycée Henri IV - Béziers",
-      "youth - 2010"
+      "2010"
     )
   )
 

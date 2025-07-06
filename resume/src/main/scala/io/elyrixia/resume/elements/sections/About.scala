@@ -65,7 +65,7 @@ private[sections] object About {
       ),
       div(
         className := "subheading mb-5",
-        "30600 Vauvert · France · ",
+        "French · 30600 Vauvert France · ",
         a(
           href := "mailto:salle.trist@gmail.com",
           "salle.trist@gmail.com"

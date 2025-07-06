@@ -11,7 +11,8 @@ package object sections {
     About.htmlElement,
     Experience.htmlElement,
     Skills.htmlElement,
-    Education.htmlElement
+    Education.htmlElement,
+    References.htmlElement
   )
 
   val htmlElement: ReactiveHtmlElement[HTMLDivElement] = div(

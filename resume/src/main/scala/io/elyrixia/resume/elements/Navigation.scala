@@ -20,7 +20,8 @@ object Navigation {
     section("About"),
     section("Experience"),
     section("Skills"),
-    section("Education")
+    section("Education"),
+    section("References")
   )
 
   val htmlElement: ReactiveHtmlElement[HTMLElement] = navTag(
