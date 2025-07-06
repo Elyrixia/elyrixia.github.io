@@ -20,8 +20,8 @@ object Messages {
     "about.title"    -> ("About", "À propos"),
     "about.location" -> ("French · 30600 Vauvert France", "Français · 30600 Vauvert France"),
     "about.description.1" -> (
-      "I am an experienced backend engineer with a strong background in SRE, devOps and infrastructure related topics.",
-      "Je suis un ingénieur backend expérimenté avec une solide expérience en SRE, devOps et sujets liés à l'infrastructure."
+      "I am an experienced backend engineer with a strong background in SRE, DevOps and Infrastructure related topics.",
+      "Je suis un ingénieur backend expérimenté avec une solide expérience en SRE, DevOps et sujets liés à l'Infrastructure."
     ),
     "about.description.2" -> (
       "I am passionate about building robust, scalable systems, from implementing complex business features to putting in place the right infrastructure for the use case.",
