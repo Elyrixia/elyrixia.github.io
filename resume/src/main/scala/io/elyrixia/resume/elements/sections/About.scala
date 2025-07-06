@@ -2,6 +2,7 @@ package io.elyrixia.resume.elements.sections
 
 import com.raquo.laminar.api.L.{*, given}
 import com.raquo.laminar.nodes.ReactiveHtmlElement
+import io.elyrixia.resume.elements.common.ProfilePic
 import org.scalajs.dom.HTMLElement
 
 private[sections] object About {
@@ -34,13 +35,8 @@ private[sections] object About {
   }
 
   private val profilePic = div(
-    className := "col-auto",
-    img(
-      className := "img-fluid img-profile rounded-circle mx-auto mb-2",
-      className := "logo",
-      alt       := "my profile pic",
-      src       := "/logo-color.webp"
-    )
+    className := "col-auto d-lg-none",
+    ProfilePic.htmlElement
   )
 
   val htmlElement: ReactiveHtmlElement[HTMLElement] = sectionTag(

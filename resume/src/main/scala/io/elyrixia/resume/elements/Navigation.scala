@@ -3,6 +3,7 @@ package io.elyrixia.resume.elements
 import com.raquo.laminar.api.L.{*, given}
 import com.raquo.laminar.codecs.StringAsIsCodec
 import com.raquo.laminar.nodes.ReactiveHtmlElement
+import io.elyrixia.resume.elements.common.ProfilePic
 import org.scalajs.dom.HTMLElement
 
 object Navigation {
@@ -36,12 +37,7 @@ object Navigation {
       ),
       span(
         className := "d-none d-lg-block",
-        img(
-          className := "img-fluid img-profile rounded-circle mx-auto mb-2",
-          className := "logo",
-          alt       := "my profile pic",
-          src       := "/logo-color.webp"
-        )
+        ProfilePic.htmlElement
       )
     ),
     button(
