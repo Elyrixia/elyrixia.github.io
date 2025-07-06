@@ -2,42 +2,43 @@ package io.elyrixia.resume.elements.sections
 
 import com.raquo.laminar.api.L.{*, given}
 import com.raquo.laminar.nodes.ReactiveHtmlElement
+import io.elyrixia.resume.localization.Localization
 import org.scalajs.dom.HTMLElement
 
 private[sections] object Education {
 
   private def education(
-      diploma: String,
-      school: String,
-      timeline: String
+      diplomaKey: String,
+      schoolKey: String,
+      timelineKey: String
   ) = div(
     className := "d-flex flex-column flex-md-row justify-content-between mb-5",
     div(
       className := "flex-grow-1",
-      h3(className  := "mb-0", diploma),
-      div(className := "subheading mb-3", school)
+      h3(className := "mb-0", child.text <-- Localization.text(diplomaKey)),
+      div(className := "subheading mb-3", child.text <-- Localization.text(schoolKey))
     ),
     div(
       className := "flex-shrink-0",
-      span(className := "text-primary", timeline)
+      span(className := "text-primary", child.text <-- Localization.text(timelineKey))
     )
   )
 
   private val educations = List(
     education(
-      "Engineering Degree - Computer Science",
-      "Polytech - Montpellier",
-      "2012 - 2015"
+      "education.degree.1.title",
+      "education.degree.1.school",
+      "education.degree.1.timeline"
     ),
     education(
-      "University Diploma of Technology - Computer Science",
-      "IUT - Montpellier",
-      "2010 - 2012"
+      "education.degree.2.title",
+      "education.degree.2.school",
+      "education.degree.2.timeline"
     ),
     education(
-      "Bachelor's degree - Science specializing in Mathematics",
-      "Lycée Henri IV - Béziers",
-      "2010"
+      "education.degree.3.title",
+      "education.degree.3.school",
+      "education.degree.3.timeline"
     )
   )
 
@@ -46,7 +47,7 @@ private[sections] object Education {
     idAttr    := "education",
     div(
       className := "resume-section-content",
-      h2(className := "mb-5", "Education"),
+      h2(className := "mb-5", child.text <-- Localization.text("education.title")),
       educations
     )
   )

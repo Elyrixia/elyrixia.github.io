@@ -2,3 +2,7 @@ target
 node_modules
 .bsp
 .idea
+.metals
+.bloop
+project/project
+

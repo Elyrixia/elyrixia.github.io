@@ -1,7 +1,7 @@
 package io.elyrixia.resume
 
 import com.raquo.laminar.api.L.{*, given}
-import io.elyrixia.resume.elements.Navigation
+import io.elyrixia.resume.elements.navigation.Navigation
 import io.elyrixia.resume.elements.sections
 import org.scalajs.dom
 

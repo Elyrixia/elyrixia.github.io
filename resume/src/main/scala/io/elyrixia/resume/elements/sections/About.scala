@@ -3,6 +3,7 @@ package io.elyrixia.resume.elements.sections
 import com.raquo.laminar.api.L.{*, given}
 import com.raquo.laminar.nodes.ReactiveHtmlElement
 import io.elyrixia.resume.elements.common.ProfilePic
+import io.elyrixia.resume.localization.Localization
 import org.scalajs.dom.HTMLElement
 
 private[sections] object About {
@@ -10,17 +11,13 @@ private[sections] object About {
   private val description = div(
     className := "lead mb-5",
     p(
-      "I am an experienced backend engineer with a strong background in site reliability engineering," +
-        " devOps and infrastructure related topics."
+      child.text <-- Localization.text("about.description.1")
     ),
     p(
-      " I am passionate about building robust, scalable systems, from implementing complex business features" +
-        " to putting in place the right matching infrastructure."
+      child.text <-- Localization.text("about.description.2")
     ),
     p(
-      " I'm currently best familiar with the JVM ecosystem and especially the Scala language but I am used to" +
-        " working with a wide range of technologies and programming languages to fill the needs of each project" +
-        " I lead or contribute to."
+      child.text <-- Localization.text("about.description.3")
     )
   )
 
@@ -61,7 +58,8 @@ private[sections] object About {
       ),
       div(
         className := "subheading mb-5",
-        "French · 30600 Vauvert France · ",
+        child.text <-- Localization.text("about.location"),
+        " · ",
         a(
           href := "mailto:salle.trist@gmail.com",
           "salle.trist@gmail.com"

@@ -2,6 +2,7 @@ package io.elyrixia.resume.elements.sections
 
 import com.raquo.laminar.api.L.{*, given}
 import com.raquo.laminar.nodes.ReactiveHtmlElement
+import io.elyrixia.resume.localization.Localization
 import org.scalajs.dom.HTMLElement
 
 private[sections] object Skills {
@@ -37,21 +38,18 @@ private[sections] object Skills {
     icons.map(icon)
   )
 
-  private def softSkill(softSkill: (String, String)) = {
-    val (softSkillTitle, softSkillDescription) = softSkill
-    li(
-      span(
-        className := "fa-li",
-        i(className := "fas fa-check")
-      ),
-      span(className := "subheading mb-3", softSkillTitle),
-      p(className    := "mb-3", softSkillDescription)
-    )
-  }
+  private def softSkill(titleKey: String, descriptionKey: String) = li(
+    span(
+      className := "fa-li",
+      i(className := "fas fa-check")
+    ),
+    span(className := "subheading mb-3", child.text <-- Localization.text(titleKey)),
+    p(className := "mb-3", child.text <-- Localization.text(descriptionKey))
+  )
 
   private def softSkillList(softSkills: (String, String)*) = ul(
     className := "fa-ul",
-    softSkills.map(softSkill)
+    softSkills.map((title, description) => softSkill(title, description))
   )
 
   val htmlElement: ReactiveHtmlElement[HTMLElement] = sectionTag(
@@ -59,12 +57,12 @@ private[sections] object Skills {
     idAttr    := "skills",
     div(
       className := "resume-section-content",
-      h2("skills"),
+      h2(child.text <-- Localization.text("skills.title")),
       hr(className := "mb-3"),
       //
-      h3(className := "mb-3", "Technical"),
+      h3(className := "mb-3", child.text <-- Localization.text("skills.technical")),
       ///
-      div(className := "subheading mb-3", "Strong Professional Experience"),
+      div(className := "subheading mb-3", child.text <-- Localization.text("skills.strong.experience")),
       iconList(
         "Scala",
         "Akka",
@@ -79,7 +77,7 @@ private[sections] object Skills {
         "ArgoCD"
       ),
       ///
-      div(className := "subheading mb-3", "Professional Experience"),
+      div(className := "subheading mb-3", child.text <-- Localization.text("skills.professional.experience")),
       iconList(
         "Java",
         "Scala-Cats",
@@ -95,34 +93,32 @@ private[sections] object Skills {
         "Github Actions"
       ),
       ///
-      div(className := "subheading mb-3", "Experience"),
+      div(className := "subheading mb-3", child.text <-- Localization.text("skills.experience")),
       iconList("Rust", "ZIO", "Kotlin", "Python", "MongoDB"),
       ///
       hr(className := "mb-3"),
       //
-      h3(className := "mb-3", "Organisational"),
+      h3(className := "mb-3", child.text <-- Localization.text("skills.organizational")),
       softSkillList(
         (
-          "Architecture design",
-          "Defined scopes, analyzed costs and impacts, selected the best solutions, defined rollout plans with" +
-            " timeline estimations"
+          "skills.soft.architecture.title",
+          "skills.soft.architecture.description"
         ),
         (
-          "Business and Technical ownership",
-          "Used to work on complex business features and large-scale technical challenges"
+          "skills.soft.ownership.title",
+          "skills.soft.ownership.description"
         ),
         (
-          "Lead projects and teams",
-          "Lead multiple cross-teams and complex projects, managed small and medium teams for several months"
+          "skills.soft.leadership.title",
+          "skills.soft.leadership.description"
         ),
         (
-          "Mentoring and Knowledge sharing",
-          "Lead knowledge sharing groups and events at work, put in place an onboarding process, taught at schools," +
-            " participated in hiring"
+          "skills.soft.mentoring.title",
+          "skills.soft.mentoring.description"
         ),
         (
-          "Communication and branding",
-          "Gave talks at public conferences, wrote articles, lead external events"
+          "skills.soft.communication.title",
+          "skills.soft.communication.description"
         )
       )
     )
