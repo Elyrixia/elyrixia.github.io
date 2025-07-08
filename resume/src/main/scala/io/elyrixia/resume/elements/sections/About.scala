@@ -9,16 +9,10 @@ import org.scalajs.dom.HTMLElement
 private[sections] object About {
 
   private val description = div(
-    className := "lead mb-5",
-    p(
-      child.text <-- Localization.text("about.description.1")
-    ),
-    p(
-      child.text <-- Localization.text("about.description.2")
-    ),
-    p(
-      child.text <-- Localization.text("about.description.3")
-    )
+    className := "lead",
+    p(className := "mb-5", child.text <-- Localization.text("about.description.1")),
+    p(className := "mb-5", child.text <-- Localization.text("about.description.2")),
+    p(className := "mb-5", child.text <-- Localization.text("about.description.3"))
   )
 
   private def icon(name: String, link: String): ReactiveHtmlElement[HTMLElement] = {

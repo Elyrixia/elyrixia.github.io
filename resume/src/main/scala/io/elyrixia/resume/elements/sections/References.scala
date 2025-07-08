@@ -13,7 +13,45 @@ object References {
     div(
       className := "resume-section-content",
       h2(className := "mb-5", child.text <-- Localization.text("references.title")),
-      p(child.text <-- Localization.text("references.available"))
+      ul(
+        className := "fa-ul mb-4",
+        li(
+          className := "mb-3",
+          span(
+            className := "fa-li",
+            i(className := "fas fa-link")
+          ),
+          a(
+            className := "subheading",
+            href      := "https://medium.com/teads-engineering/the-caching-strategy-of-our-teads-ssp-b0e152e951d0",
+            "Medium Article - The Caching Strategy of our Teads SSP"
+          )
+        ),
+        li(
+          className := "mb-3",
+          span(
+            className := "fa-li",
+            i(className := "fas fa-link")
+          ),
+          a(
+            className := "subheading",
+            href      := "https://github.com/Elyrixia/elyrixia.github.io",
+            "Github Repository of this Resume - Feel free to take inspiration from it!"
+          )
+        ),
+        li(
+          className := "mb-3",
+          span(
+            className := "fa-li",
+            i(className := "fas fa-link")
+          ),
+          a(
+            className := "subheading",
+            href      := "https://github.com/Elyrixia/conf-slides",
+            "Slides for the public talks I made and some teaching material I gave to schools"
+          )
+        )
+      )
     )
   )
 

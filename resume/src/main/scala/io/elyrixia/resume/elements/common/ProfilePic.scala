@@ -10,8 +10,8 @@ object ProfilePic {
   def htmlElement: ReactiveHtmlElement[HTMLImageElement] = img(
     className := "img-fluid img-profile rounded-circle mx-auto mb-2",
     className := "logo",
-    alt       := "my profile pic",
-    src       := "/logo-color.webp"
+    alt       := "My profile pic",
+    src       := "/profile-pic.webp"
   )
 
 }

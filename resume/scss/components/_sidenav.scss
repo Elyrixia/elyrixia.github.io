@@ -16,7 +16,6 @@
 
     // Language switcher buttons
     .language-buttons {
-
         .btn {
             border: none;
             background: none;
@@ -24,13 +23,13 @@
             margin: 0 0.125rem;
             transition: opacity 0.2s ease;
             text-decoration: none;
-            
+
             &:hover {
                 opacity: 0.8;
                 background: rgba(255, 255, 255, 0.1);
                 border-radius: 4px;
             }
-            
+
             &:focus {
                 outline: none;
                 box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.3);
@@ -89,7 +88,7 @@
                     }
                 }
             }
-            
+
             .language-buttons {
                 margin-top: 1rem;
                 display: flex;

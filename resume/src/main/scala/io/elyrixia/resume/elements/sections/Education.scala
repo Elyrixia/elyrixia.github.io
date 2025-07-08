@@ -15,7 +15,7 @@ private[sections] object Education {
     className := "d-flex flex-column flex-md-row justify-content-between mb-5",
     div(
       className := "flex-grow-1",
-      h3(className := "mb-0", child.text <-- Localization.text(diplomaKey)),
+      h3(className  := "mb-0", child.text <-- Localization.text(diplomaKey)),
       div(className := "subheading mb-3", child.text <-- Localization.text(schoolKey))
     ),
     div(

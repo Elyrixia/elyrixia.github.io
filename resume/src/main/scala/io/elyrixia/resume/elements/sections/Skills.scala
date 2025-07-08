@@ -44,7 +44,7 @@ private[sections] object Skills {
       i(className := "fas fa-check")
     ),
     span(className := "subheading mb-3", child.text <-- Localization.text(titleKey)),
-    p(className := "mb-3", child.text <-- Localization.text(descriptionKey))
+    p(className    := "mb-3", child.text <-- Localization.text(descriptionKey))
   )
 
   private def softSkillList(softSkills: (String, String)*) = ul(
