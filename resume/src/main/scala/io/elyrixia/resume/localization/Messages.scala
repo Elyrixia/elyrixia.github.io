@@ -15,6 +15,7 @@ object Messages {
     "nav.skills"     -> ("Skills", "Compétences"),
     "nav.education"  -> ("Education", "Éducation"),
     "nav.references" -> ("References", "Références"),
+    "nav.title"      -> ("Tristan Sallé · Resume", "Tristan Sallé · CV"),
 
     // About Section
     "about.title"    -> ("About", "À propos"),

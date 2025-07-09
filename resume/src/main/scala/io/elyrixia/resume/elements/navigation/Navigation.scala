@@ -28,8 +28,8 @@ object Navigation {
     )
   )
 
-  private val languageButtons = div(
-    className := "language-buttons d-flex align-items-center ms-auto",
+  private def languageButtons(display: String) = div(
+    className := s"language-buttons d-flex align-items-center ms-auto $display",
     Language.all.map(languageButton)
   )
 
@@ -48,8 +48,18 @@ object Navigation {
       className := "navbar-brand js-scroll-trigger",
       href      := "#page-top",
       span(
-        className := "d-block d-lg-none",
-        "Tristan Sallé"
+        className := "d-block d-lg-none container",
+        div(
+          className := "row",
+          div(
+            className := "col-auto fs-4",
+            child.text <-- Localization.text("nav.title")
+          ),
+          div(
+            className := "col-auto",
+            languageButtons("")
+          )
+        )
       ),
       span(
         className := "d-none d-lg-block",
@@ -72,7 +82,7 @@ object Navigation {
       ul(
         className := "navbar-nav",
         sections,
-        languageButtons
+        languageButtons("d-none d-lg-block")
       )
     )
   )
