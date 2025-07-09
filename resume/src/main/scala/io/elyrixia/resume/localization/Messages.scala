@@ -190,8 +190,8 @@ object Messages {
     "education.degree.3.timeline" -> "2010",
 
     // References Section
-    "references.title"     -> ("References - WIP", "Références - WIP"),
-    "references.available" -> ("TODO", "TODO")
+    "references.title"     -> ("References", "Références"),
+    "references.translate" -> ("TODO", "TODO")
   )
 
   def get(key: String, language: Language): String = {
