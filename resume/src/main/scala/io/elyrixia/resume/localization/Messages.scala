@@ -29,10 +29,10 @@ object Messages {
         " métier complexes à la mise en place de l'infrastructure répondant au mieux à chaque problème."
     ),
     "about.description.2" -> (
-      "I'm currently managing a delivery platform responsible for serving more than 200k requests per second with a" +
+      "I'm currently managing an ad delivery platform responsible for serving more than 200k requests per second with a" +
         " latency of less than 200ms on the p99, while processing 150+ complex business and technical rules for" +
         " each request.",
-      "Je gère actuellement une plateforme traitant plus de 200k requêtes par seconde avec" +
+      "Je gère actuellement une plateforme publicitaire traitant plus de 200k requêtes par seconde avec" +
         " une latence inférieure à 200ms sur le p99, tout en gérant 150+ règles métier et techniques" +
         " complexes pour chaque requête."
     ),
